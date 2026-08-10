@@ -1,0 +1,15 @@
+#N canvas 686 426 583 437 12;
+#X obj 189 55 inlet;
+#X obj 189 224 soundfiler;
+#X obj 189 162 pack symbol symbol;
+#X msg 189 194 read -resize \$1 \$2;
+#X obj 189 92 t a b;
+#X obj 312 128 symbol sample-\$1;
+#X obj 306 224 array define sample-\$1;
+#X text 153 12 Abstraction containing cloned arrays. Holds 1086 samples in their own seperate sub patch., f 45;
+#X connect 0 0 4 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 4 0 2 0;
+#X connect 4 1 5 0;
+#X connect 5 0 2 1;
