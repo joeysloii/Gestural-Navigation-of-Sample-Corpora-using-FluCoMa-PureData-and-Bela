@@ -14,3 +14,14 @@ This project uses the Bela Gem Stereo interfaced with a hybrid C++/PureData scri
 - gesture_vector_builder.pd - Patch used to record gestural data from Bela (regressor input).
 - ground_truth_builder.pd - Patch used to record corpus transpositional data (regressor output).
 - regressor_trainer.pd - Patch used to combine datasets and train a regressor.
+### Python
+- assign_identifiers.py - Creates .txt file containing file paths to samples alongside a unique identifier (for offline testing).
+- assign_identifiers_bela.py - Creates .txt file containing file paths to samples alongside a unique identifier (for use on Bela).
+### JSON/Text Peripherals 
+- Samples.txt - Output from Python. Contains File paths and unique identifiers for each sample.  
+- 2d_corp.json - Output from "corpus_builder.pd". Contains corpus coordinates and unique identifiers for each sample.
+- master_input.json - "Output from regressor_trainer.pd". Merged dataset containing all gesture recordings used in "gesture_vector_builder.pd".
+- master_output.json - "Output from regressor_trainer.pd". Merged dataset containing all transpositional data used in "ground_truth_builder.pd".
+- input_extrema.json - "Output from regressor_trainer.pd". Normalisation extrema required so that input gesture vectors fit the regressor.
+- output_extrema.json - "Output from regressor_trainer.pd". Normalisation extrema required so that output transpositional data can be de-normalised.
+- learned_mappings.json - "Output from regressor_trainer.pd". Stores and loads the regressor curve. 
