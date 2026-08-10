@@ -38,7 +38,7 @@ A corpus is an N-dimensional space which has been reduced from, usually, many mo
 ### Direct Mappings 
 "Direct Mappings" take IMU data and "directly" map them to some transposition through the corpus of audio samples via some simple mathematical operation. This is the simplest way of navigating the corpus. 
 1. Open up "_main_direct.pd" and explore the different sub-patches. You can change the BPM and sequence a different style of beat if you wish.
-2. If you have built your own corpus, there are a few values you will need to update. Open up the "pd sampler" sub patch and follow the instructions. Then open up "pd kick_voice", "pd snare_voice" and "pd hat_voice", and update the starting coordinates to positions that are well suited to your own corpus. 
+2. If you have built your own corpus, there are a few values you will need to update. Within "_main_direct.pd", open up the "pd sampler" sub patch and follow the instructions. Then open up "pd kick_voice", "pd snare_voice" and "pd hat_voice", and update the starting coordinates to positions that are better suited to your own corpus. 
 
 
 
