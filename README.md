@@ -28,7 +28,8 @@ This project uses the Bela Gem Stereo interfaced with a hybrid C++/PureData scri
 ### Audio Samples
 - The example files used in the development of this system were from the "Thomas Penton Essential" drum sample pack.
 ## Prerequisites
-To use the system as it is presented, you must have access to the Bela Gem Stereo with attached MPU6050 IMU (Accelerometer/Gyroscope module), PureData with the FluCoMa library installed, and Python. The FluCoMa library must also be declared on Bela after storing the files in a separate project within the Bela IDE. 
+To use the system as it is presented, you must have access to the Bela Gem Stereo with attached MPU6050 IMU (Accelerometer/Gyroscope module), PureData with the FluCoMa library installed, and Python. The FluCoMa library must also be declared on Bela after storing the files in a separate project within the Bela IDE. To do this, please follow the guidance given in this forum post. 
+https://forum.bela.io/d/7831-compiling-flucoma-for-pd-on-bela-gem
 ## Instructions for Use
 ### Building the Corpus
 A corpus is an N-dimensional space which has been reduced from, usually, many more dimensions. In this example, 14 dimensions have been reduced to just two, which are used as coordinates in a 2D space. In this way, audio samples that are very similar to each other across all 14 dimensions can be positioned more closely to one another in the 2D space. 
@@ -54,7 +55,8 @@ A corpus is an N-dimensional space which has been reduced from, usually, many mo
 10. If you have built your own corpus, there are a few values you will need to update. Within "_main_learned.pd", open up the "pd sampler" sub patch and follow the instructions. Then open up "pd kick_voice", "pd snare_voice" and "pd hat_voice", and update the starting coordinates to positions that are better suited to your own corpus.
 ### Bela Setup 
 These are instructions on how to setup the Bela IDE.
-1. Drag and drop the following files from your desktop into your IDE project:
+1. For FluCoMa objects to work inside Bela, follow the steps here https://forum.bela.io/d/7831-compiling-flucoma-for-pd-on-bela-gem.
+2. Drag and drop the following files from your desktop into your IDE project:
 - render.cpp
 - MadgwickAHRS.cpp/MadgwickAHRS.h
 - _main_direct.pd OR _main_leanred.pd
@@ -64,7 +66,8 @@ These are instructions on how to setup the Bela IDE.
 - input_extrema.json/output_extrema.json
 - learned_mappings.json
 2. Create a subfolder in the IDE called "Samples" and put all audio samples in this folder. 
-3. Rename "_main_direct.pd" or "_main_learned.pd" to "_main.pd". 
+3. Rename "_main_direct.pd" or "_main_learned.pd" to "_main.pd".
+
 
 
 
