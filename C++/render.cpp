@@ -156,13 +156,11 @@ bool setup(BelaContext *context, void *userData)
 	i2c_fd = open(DEVICE, O_RDWR); // Open I2C bus
 	if(i2c_fd < 0)
 	{
-		rt_printf("Could not open I2C\n");
 		return false;
 	}
 
 	if(ioctl(i2c_fd, I2C_SLAVE, MPU_ADDR) < 0) // Selects MPU6050
 	{
-		rt_printf("Could not connect to MPU6050\n");
 		return false;
 	}
 	
@@ -172,8 +170,6 @@ bool setup(BelaContext *context, void *userData)
 	writeReg(0x1A, 0x03); // DLPF ~44Hz - reduces noise
 	writeReg(0x1B, 0x00); // gyro mode ±250 deg/s
 	writeReg(0x1C, 0x00); // accel mode ±2g
-
-	rt_printf("MPU6050 started\n");
 
 	if(!BelaLibpd_setup(context, userData, {}))
 		return false;
