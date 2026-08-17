@@ -1,5 +1,7 @@
 # Gestural-Navigation-of-Sample-Corpora-using-FluCoMa-PureData-and-Bela
 This project uses the Bela Gem Stereo interfaced with a hybrid C++/PureData script. The outcome of this project is a novel instrument which navigates a corpus of drum sounds in real time. FluCoMa is used heavily here for feature extraction, corpus building and regression algorithms.
+###
+Research by Joseph Mcsloy, MSc Sound and Music Computing at QMUL.
 ## Contents 
 ### C++
 - render.cpp - Custom Bela render for hybrid C++ and PureData operation.
@@ -67,6 +69,11 @@ These are instructions on how to setup the Bela IDE.
 - learned_mappings.json
 2. Create a subfolder in the IDE called "Samples" and put all audio samples in this folder. 
 3. Rename "_main_direct.pd" or "_main_learned.pd" to "_main.pd".
+
+# References 
+Madgwick filter by Per Tillisch - https://github.com/arduino-libraries/MadgwickAHRS/tree/master 
+
+Samples by Thomas Penton - https://www.loopmasters.com/genres/25-House/products/423-Thomas-Penton-Essential-Series-Vol1?srsltid=AfmBOor347_xAlOUgiidKSEqpVj8U1eVslKIVlIJjHfB9ACv3c0IsHkQ
 
 
 
