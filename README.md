@@ -5,8 +5,8 @@ Research by Joseph Mcsloy, MSc Sound and Music Computing at QMUL.
 ## Contents 
 ### C++
 - render.cpp - Custom Bela render for hybrid C++ and PureData operation.
-- MadgwickAHRS.cpp - Source file containing Madgwick filter. Converts raw IMU data into orientation and acceleration about three axes.
-- MadgwickAHRS.h - Header filer containing Madgwick filter.
+- MadgwickAHRS.cpp - Source file containing Madgwick filter by Per Tillisch [1]. Converts raw IMU data into orientation and acceleration about three axes.
+- MadgwickAHRS.h - Header filer containing Madgwick filter by Per Tillisch [1].
 ### PureData (Runtime Patches)
 - _main_direct.pd - Main PureData patch to be ran on Bela. This is 1 of 2 patches that can be used as "_main.pd".
 - _main_learned.pd - Main PureData patch to be ran on Bela. This is 2 of 2 patches that can be used as "_main.pd".
@@ -35,7 +35,7 @@ https://forum.bela.io/d/7831-compiling-flucoma-for-pd-on-bela-gem
 ## Instructions for Use
 ### Building the Corpus
 A corpus is an N-dimensional space which has been reduced from, usually, many more dimensions. In this example, 14 dimensions have been reduced to just two, which are used as coordinates in a 2D space. In this way, audio samples that are very similar to each other across all 14 dimensions can be positioned more closely to one another in the 2D space. 
-1. First, decide which audio samples will be used. If using the "Thomas Penton Essential" collection, all you need to do is follow the steps in the "Bela Setup" section below. 
+1. First, decide which audio samples will be used. If using the "Thomas Penton Essential" collection [2], all you need to do is follow the steps in the "Bela Setup" section below. 
 2. Run the Python script "assign_identifiers.py" to choose any number of audio samples from your computer. Save the output .txt as "Samples.txt" on your desktop. Now all file paths have been saved with a unique identifier, so that samples can be traced throughout the following process.
 3. Open "corpus_builder.pd" and follow the steps in order. Depending on the types of audio samples you are using, you may wish to modify the types of spectral features you are feeding into the algorithm. For example, the example patch uses spectral shape and chroma features, since this worked well for organising solely drum sounds. Other features such as MFCCs and loudness are also available should you wish to compare how these work. After this step you should have a file named "2d_corp.json", which saves and stores corpus information for later retrieval.
 ### Direct Mappings 
@@ -71,9 +71,9 @@ These are instructions on how to setup the Bela IDE.
 3. Rename "_main_direct.pd" or "_main_learned.pd" to "_main.pd".
 
 # References 
-Madgwick filter by Per Tillisch - https://github.com/arduino-libraries/MadgwickAHRS/tree/master 
+[1] Madgwick filter by Per Tillisch - https://github.com/arduino-libraries/MadgwickAHRS/tree/master 
 
-Samples by Thomas Penton - https://www.loopmasters.com/genres/25-House/products/423-Thomas-Penton-Essential-Series-Vol1?srsltid=AfmBOor347_xAlOUgiidKSEqpVj8U1eVslKIVlIJjHfB9ACv3c0IsHkQ
+[2] Samples by Thomas Penton - https://www.loopmasters.com/genres/25-House/products/423-Thomas-Penton-Essential-Series-Vol1?srsltid=AfmBOor347_xAlOUgiidKSEqpVj8U1eVslKIVlIJjHfB9ACv3c0IsHkQ
 
 
 
